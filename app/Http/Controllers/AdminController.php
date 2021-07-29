@@ -11,4 +11,11 @@ class AdminController extends Controller
         $data = user::all();
         return view('admin.users', compact('data'));
     }
+
+    public function delete($id)
+    {
+        $data = user::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
 }
