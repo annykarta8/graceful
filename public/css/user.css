@@ -1,0 +1,14 @@
+table {
+    background-color: lightblue;
+    position: relative;
+    top: 60px;
+    right: -150px;
+}
+
+th {
+    padding: 30px;
+}
+
+tr {
+    text-align: center;
+}
