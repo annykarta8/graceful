@@ -20,9 +20,16 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/users', [AdminController::class, 'user']);
+
 Route::get('/posts', [AdminController::class, 'posts']);
+
+Route::get('/createimg', [AdminController::class, 'createimg']);
+
 Route::get('/deleteimg/{id}', [AdminController::class, 'deleteimg']);
+
+Route::get('/updateimg/{id}', [AdminController::class, 'updateimg']);
 
 Route::post('/upload', [AdminController::class, 'upload']);
 

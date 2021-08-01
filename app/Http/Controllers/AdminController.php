@@ -38,10 +38,23 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
+
+    public function createimg()
+    {
+
+        return view('admin.createimg');
+    }
+
     public function deleteimg($id)
     {
         $data = post::find($id);
         $data->delete();
         return redirect()->back();
+    }
+
+    public function updateimg($id)
+    {
+        $data = post::find($id);
+        return view('admin.updateimg', compact('data'));
     }
 }

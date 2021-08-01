@@ -19,15 +19,9 @@
             @include('admin.sidebar')
             <!-- partial -->
             <div class="form">
-                <form action="{{ url('/upload') }}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div><label for="">Image:</label>
-                        <input type="file" name="image" required>
-                    </div>
-                    <div><input class="submit" type="submit" value="Save"></div>
-                </form>
                 <div>
                     <table>
+                        <button><a href="{{ url('/createimg') }}">Create</a></td></button>
                         <tr>
                             <th>Uploaded:</th>
                         </tr>
@@ -35,6 +29,7 @@
                         <tr>
                             <td><img src='/image/{{ $data->image }}' width="150px"></td>
                             <td><a href="{{ url('/deleteimg',$data->id ) }}">Delete</a></td>
+                            <td><a href="{{ url('/updateimg',$data->id ) }}">Update</a></td>
                         </tr>
                         @endforeach
 
