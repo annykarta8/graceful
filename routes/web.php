@@ -21,6 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/users', [AdminController::class, 'user']);
+Route::get('/posts', [AdminController::class, 'posts']);
+Route::get('/deleteimg/{id}', [AdminController::class, 'deleteimg']);
+
+Route::post('/upload', [AdminController::class, 'upload']);
+
 Route::get('/delete/{id}', [AdminController::class, 'delete']);
 
 Route::get('/redirects', [HomeController::class, 'redirects']);

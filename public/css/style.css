@@ -66,6 +66,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.img {
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .foot {
