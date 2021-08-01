@@ -31,6 +31,8 @@ Route::get('/deleteimg/{id}', [AdminController::class, 'deleteimg']);
 
 Route::get('/updateimg/{id}', [AdminController::class, 'updateimg']);
 
+Route::post('/update/{id}', [AdminController::class, 'update']);
+
 Route::post('/upload', [AdminController::class, 'upload']);
 
 Route::get('/delete/{id}', [AdminController::class, 'delete']);

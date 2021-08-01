@@ -57,4 +57,16 @@ class AdminController extends Controller
         $data = post::find($id);
         return view('admin.updateimg', compact('data'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $data = post::find($id);
+        $image = $request->image;
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('image', $imagename);
+        $data->image = $imagename;
+        $data->save();
+        return redirect()->back();
+
+    }
 }
