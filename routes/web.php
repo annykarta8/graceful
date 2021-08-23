@@ -21,15 +21,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::get('/about', [HomeController::class, 'about']);
+
+Route::get('/accessories', [HomeController::class, 'accessories']);
+
 Route::get('/users', [AdminController::class, 'user']);
 
 Route::get('/posts', [AdminController::class, 'posts']);
 
-Route::get('/createimg', [AdminController::class, 'createimg']);
+Route::get('/createimg', [AdminController::class, 'createimg']); //post
 
-Route::get('/deleteimg/{id}', [AdminController::class, 'deleteimg']);
+Route::get('/deleteimg/{id}', [AdminController::class, 'deleteimg']); //post
 
-Route::get('/updateimg/{id}', [AdminController::class, 'updateimg']);
+Route::get('/updateimg/{id}', [AdminController::class, 'updateimg']); //post
 
 Route::post('/update/{id}', [AdminController::class, 'update']);
 
@@ -41,4 +45,4 @@ Route::get('/redirects', [HomeController::class, 'redirects']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard'); //Route::middleware() 在發給handler處理之前，可以做更多的事情。

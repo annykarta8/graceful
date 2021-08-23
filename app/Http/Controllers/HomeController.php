@@ -13,6 +13,16 @@ class HomeController extends Controller
         return view('index', compact('data'));
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function accessories()
+    {
+        return view('accessories');
+    }
+
     public function redirects()
     {
         $data = post::all();

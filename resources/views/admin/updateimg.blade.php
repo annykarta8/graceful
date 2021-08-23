@@ -2,6 +2,7 @@
 <html lang="en">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
 <head>
     <base href="/public">
@@ -19,16 +20,19 @@
             @include('admin.sidebar')
             <!-- partial -->
             <div class="form">
-                <form action="{{ url('/upload') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('/update',$data->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div>
-                        <label for="">OldImage:</label>
-                        <img src='/image/{{ $data->image }}' width="150px"></td>
+                    <div class="old">
+                        <label>Old Image:</label>
+                        <label><img src='/image/{{ $data->image }}'
+                                style="width: 10%; height:10%; display: inherit"></label>
+
                     </div>
-                    <div><label for="">NewImage:</label>
+                    <div class="new">
+                        <label>Update Image:</label>
                         <input type="file" name="image" required>
                     </div>
-                    <div><input class="submit" type="submit" value="Save"></div>
+                    <div class="save"><input class="submit" type="submit" value="Save"></div>
                 </form>
             </div>
         </div>
