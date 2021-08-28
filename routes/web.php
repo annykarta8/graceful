@@ -22,24 +22,44 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', [HomeController::class, 'about']);
-
-Route::get('/accessories', [HomeController::class, 'accessories']);
-
+/*user*/
 Route::get('/users', [AdminController::class, 'user']);
 
+Route::get('/delete/{id}', [AdminController::class, 'delete']);
+/*post*/
 Route::get('/posts', [AdminController::class, 'posts']);
 
-Route::get('/createimg', [AdminController::class, 'createimg']); //post
+Route::get('/createimg', [AdminController::class, 'createimg']);
 
-Route::get('/deleteimg/{id}', [AdminController::class, 'deleteimg']); //post
+Route::get('/deleteimg/{id}', [AdminController::class, 'deleteimg']);
 
-Route::get('/updateimg/{id}', [AdminController::class, 'updateimg']); //post
+Route::get('/updateimg/{id}', [AdminController::class, 'updateimg']);
 
 Route::post('/update/{id}', [AdminController::class, 'update']);
 
 Route::post('/upload', [AdminController::class, 'upload']);
+/*product */
+Route::get('/products', [AdminController::class, 'products']);
 
-Route::get('/delete/{id}', [AdminController::class, 'delete']);
+Route::post('/uploadproduct', [AdminController::class, 'uploadproduct']);
+
+Route::get('/createproduct', [AdminController::class, 'createproduct']);
+
+Route::get('/deleteproduct/{id}', [AdminController::class, 'deleteproduct']);
+
+Route::get('/updateproduct/{id}', [AdminController::class, 'updateproduct']);
+
+Route::post('/updateview/{id}', [AdminController::class, 'updateview']);
+
+Route::get('/product/earrings', [HomeController::class, 'earrings']);
+
+Route::get('/product/bracelet', [HomeController::class, 'bracelet']);
+
+Route::get('/product/rings', [HomeController::class, 'rings']);
+
+Route::get('/product/necklace', [HomeController::class, 'necklace']);
+
+Route::get('/product/hairaccessory', [HomeController::class, 'hairaccessory']);
 
 Route::get('/redirects', [HomeController::class, 'redirects']);
 

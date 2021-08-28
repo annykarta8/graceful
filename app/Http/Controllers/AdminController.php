@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\post;
+use App\Models\product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -69,5 +70,51 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
+    public function products()
+    {
+        $data = product::all();
+        return view('admin.products', compact('data'));
+    }
 
+    public function createproduct()
+    {
+
+        return view('admin.createproduct');
+    }
+    public function uploadproduct(Request $request)
+    {
+        $data = new product;
+        $image = $request->image;
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('product-image', $imagename);
+        $data->image = $imagename;
+        $data->name = $request->name;
+        $data->save();
+        return redirect()->back();
+
+    }
+    public function deleteproduct($id)
+    {
+        $data = product::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+
+    public function updateproduct($id)
+    {
+        $data = product::find($id);
+        return view('admin.updateproduct', compact('data'));
+    }
+
+    public function updateview(Request $request, $id)
+    {
+        $data = product::find($id);
+        $image = $request->image;
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $request->image->move('product-image', $imagename);
+        $data->image = $imagename;
+        $data->save();
+        return redirect()->back();
+
+    }
 }
