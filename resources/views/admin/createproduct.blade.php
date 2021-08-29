@@ -22,6 +22,7 @@
             <div class="form">
                 <form action="{{ url('/uploadproduct') }}" method="post" enctype="multipart/form-data">
                     @csrf
+                    <div class="return"><a href="{{ url('/products') }}">Return</a></div>
                     <div class="header">
                         <p>Products</p>
                     </div>

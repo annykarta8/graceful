@@ -20,7 +20,9 @@
             <!-- partial -->
             <div class="form">
                 <div class="sheet">
-                    <p>Post</p>
+                    <div class="header">
+                        <p>Post</p>
+                    </div>
                     {{--  <p>Post Image</p>  --}}
                     <table>
                         <div class="btn"><a href="{{ url('/createimg') }}">Create</a> </div>

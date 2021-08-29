@@ -22,6 +22,7 @@
             <div class="form">
                 <form action="{{ url('/updateview',$data->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
+                    <div class="return"><a href="{{ url('/products') }}">Return</a></div>
                     <div>
                         <label>Product Name:</label>
                         <input type="text" name="name" value="{{ $data->name }}" required>

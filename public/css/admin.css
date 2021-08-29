@@ -12,7 +12,17 @@
 .submit:hover {
     background-color: lightgray;
 }
-
+.return {
+    background-color: #9e9e9e;
+    border-radius: 5px;
+    width: 80px;
+    margin-top: 20px;
+    color: #fff;
+    margin-left: 300px;
+}
+.return:hover {
+    background-color: rgb(212, 212, 212);
+}
 .form {
     /* background-color: lightblue; */
     text-align: center;

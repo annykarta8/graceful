@@ -13,4 +13,5 @@
 <!-- endinject -->
 <link rel="shortcut icon" href="admin/images/favicon.png" />
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="jquery.multiscroll.css" />

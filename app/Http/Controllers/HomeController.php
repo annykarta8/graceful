@@ -17,10 +17,25 @@ class HomeController extends Controller
     {
         return view('about');
     }
-
-    public function accessories()
+    public function earrings()
     {
-        return view('accessories');
+        return view('/product/earrings');
+    }
+    public function bracelet()
+    {
+        return view('product.bracelet');
+    }
+    public function rings()
+    {
+        return view('product.rings');
+    }
+    public function necklace()
+    {
+        return view('product.necklace');
+    }
+    public function hairaccessory()
+    {
+        return view('product.hairaccessory');
     }
 
     public function redirects()

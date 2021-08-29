@@ -22,6 +22,7 @@
             <div class="form">
                 <form action="{{ url('/update',$data->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
+                    <div class="return"><a href="{{ url('/posts') }}">Return</a></div>
                     <div class="old">
                         <label>Old Image:</label>
                         <label><img src='/image/{{ $data->image }}'

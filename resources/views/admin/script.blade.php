@@ -20,9 +20,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
-<!-- Custom js for this page-->
+<script src="https://use.fontawesome.com/65957d903a.js"></script>
+<!-- Custom js for this page
+    -->
 <script src="admin/js/dashboard.js"></script>
-<!-- End custom js for this page-->
+<!-- End custom js for this page
+    -->
 <script>
     function del() {
         var msg = "您確定要刪除嗎?";
@@ -86,6 +89,14 @@
             flag = 0;
         }
         setTimeout("start()", 800);
+    }
+
+</script>
+
+<script>
+    function show() {
+        let elem = document.querySelector('.menu');
+        elem.style.display = 'flex';
     }
 
 </script>

@@ -16,7 +16,7 @@
             <a href="" class="project-description">
                 <div class="project-text-holder">
                     <div class="project-text-inner">
-                        <p>Hairping</p>
+                        <p>Hairaccessory</p>
                     </div>
                 </div>
             </a>

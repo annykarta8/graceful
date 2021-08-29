@@ -21,6 +21,7 @@
             <div class="form">
                 <form action="{{ url('/upload') }}" method="post" enctype="multipart/form-data">
                     @csrf
+                    <div class="return"><a href="{{ url('/posts') }}">Return</a></div>
                     <div><label>Image:</label>
                         {{--  <input type="file" name="image" required>  --}}
 
