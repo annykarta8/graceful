@@ -198,9 +198,28 @@ tr td {
 td {
     border: 1px solid rgb(184, 184, 184);
 }
-.product th {
-    width: 10%;
-}
+
 .product td {
     padding: 40px;
+}
+/*paginate*/
+.hidden p {
+    display: none;
+}
+.hidden span {
+    align-items: center;
+}
+.hidden .rounded-l-md {
+    margin-top: 30px;
+    height: 50px;
+}
+.hidden .-ml-px {
+    width: 10px;
+    height: 50px;
+}
+.hidden .rounded-r-md {
+    width: 40px;
+}
+.product nav {
+    margin-left: 750px;
 }

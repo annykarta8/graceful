@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @include('admin.css')
+
 </head>
 
 <body>
@@ -32,49 +33,19 @@
                             <th>Image</th>
                             <th>Action</th>
                         </tr>
-                        @foreach ($data as $data )
+                        @foreach ($datas as $data )
                         <tr>
                             <td>{{ $data->id }}</td>
                             <td>{{ $data->name }}</td>
-                            <td><img height="200" width="200" src="/product-image/{{ $data->image }}" alt=""></td>
+                            <td><img height="100" width="100" src="/product-image/{{ $data->image }}" alt=""></td>
                             <td class="del"><a href="{{ url('/deleteproduct',$data->id ) }}"
                                     onclick="javascript:return del();">Delete</a>
                                 <span class="upd"><a href="{{ url('/updateproduct',$data->id ) }}">Update</a></span>
                             </td>
                         </tr>
                         @endforeach
-
-                        {{--  <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>  --}}
                     </table>
+                    {!! $datas->links() !!}
                 </div>
             </div>
         </div>
