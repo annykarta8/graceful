@@ -7,7 +7,9 @@
                     <h2>WELCOME</h2>
                 </div>
                 <div class="banner-shopping">
-                    <p>SHOPPING</p>
+                    <a href="{{ url('/') }}" style="text-decoration: none">
+                        <p>SHOPPING</p>
+                    </a>
                 </div>
             </div>
             <div>

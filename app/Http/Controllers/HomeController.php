@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\category;
 use App\Models\post;
+use App\Models\product;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
+    private function makeJson($status, $data = null, $msg = null)
+    {
+        //轉 JSON 時確保中⽂不會變成 Unicode
+        return response()->json(['status' => $status, 'data' => $data, 'message' => $msg])->setEncodingOptions(JSON_UNESCAPED_UNICODE);
+    }
     public function index()
     {
         $data = post::all();
@@ -17,25 +25,36 @@ class HomeController extends Controller
     {
         return view('about');
     }
-    public function earrings()
+    public function showlist($category_id)
     {
-        return view('/product/earrings');
+        $products = product::where('category', $category_id)->get();
+        return view('product.category', compact('products'));
     }
-    public function bracelet()
+    public function get_category(View $view)
     {
-        return view('product.bracelet');
+        $category = category::select('id', 'title')->get();
+        $view->with('menu_category', $category);
     }
-    public function rings()
+
+    // public function get_product_info(product $product)
+    // {
+    //     if (is_null($product)) {
+    //         return $this->makeJson(0, null, '找不到商品');
+    //     } else {
+    //         return $this->makeJson(1, $product, null);
+    //     }
+
+    // }
+
+    public function productdetail($product_id)
     {
-        return view('product.rings');
-    }
-    public function necklace()
-    {
-        return view('product.necklace');
-    }
-    public function hairaccessory()
-    {
-        return view('product.hairaccessory');
+        if (product::where('id', $product_id)->exists()) {
+            $commodity = product::where('id', $product_id)->first();
+            return view('product.productdetail', compact('commodity'));
+        } else {
+            return redirect('/')->with('status', "The links was broken");
+        }
+
     }
 
     public function redirects()

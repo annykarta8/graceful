@@ -24,11 +24,23 @@
                     @csrf
                     <div class="return"><a href="{{ url('/products') }}">Return</a></div>
                     <div class="header">
-                        <p>Products</p>
+                        <h1>Products</h1>
                     </div>
-                    <div><label>Name:<input type="text" name="name" required></label></div>
-                    <div><label>Image:<input type="file" name="image" required></label></div>
-                    <div class="save"><input class="submit" type="submit" value="Save"></div>
+                    <div class="create-product">
+                        <p>Name: <input type="text" name="name" required></p>
+                        <p>Category:
+                            <select name="category" id="category">
+                                @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                @endforeach
+                            </select>
+                        </p>
+                        <p class="product-image">Image: <input type="file" name="image" required></p>
+                        <p>Content:</p>
+                        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+
+                    </div>
+                    <div class="save"><input class="submit" type="submit" value="Save" onclick="success()"></div>
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@
         <div class="grid-item1">
             <div class="bor1"></div>
             <img class=" img-responsive" alt="" src="{{ url('/slideimage/earrings.jpg') }}">
-            <a href="" class="project-description">
+            <a href="{{url('/product/category/1')  }}" class="project-description">
                 <div class="project-text-holder">
                     <div class="project-text-inner">
                         <p>Earrings</p>
@@ -13,7 +13,7 @@
         </div>
         <div class="grid-item2">
             <img class="img-responsive" alt="" src="{{ url('/slideimage/hairping.jpg') }}">
-            <a href="" class="project-description">
+            <a href="{{url('/product/category/5')  }}" class="project-description">
                 <div class="project-text-holder">
                     <div class="project-text-inner">
                         <p>Hairaccessory</p>
@@ -23,7 +23,7 @@
         </div>
         <div class="grid-item3">
             <img class="img-responsive" alt="" src="{{ url('/slideimage/rings.jpg') }}">
-            <a href="" class="project-description">
+            <a href="{{url('/product/category/3')  }}" class="project-description">
                 <div class="project-text-holder">
                     <div class="project-text-inner">
                         <p>Rings</p>
@@ -33,7 +33,7 @@
         </div>
         <div class="grid-item4">
             <img class="img-responsive" alt="" src="{{ url('/slideimage/necklace.jpg') }}">
-            <a href="" class="project-description">
+            <a href="{{url('/product/category/4')  }}" class="project-description">
                 <div class="project-text-holder">
                     <div class="project-text-inner">
                         <p>Necklace</p>
@@ -43,7 +43,7 @@
         </div>
         <div class="grid-item5">
             <img class="img-responsive" alt="" src="{{ url('/slideimage/bracelets.jpg') }}">
-            <a href="" class="project-description">
+            <a href="{{url('/product/category/2')  }}" class="project-description">
                 <div class="project-text-holder">
                     <div class="project-text-inner">
                         <p>Bracelets</p>

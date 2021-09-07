@@ -21,7 +21,7 @@
             <div class="form">
                 <div class="sheet">
                     <div class="header">
-                        <p>Post</p>
+                        <h1>Post</h1>
                     </div>
                     {{--  <p>Post Image</p>  --}}
                     <table>

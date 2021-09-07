@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\category;
 use App\Models\post;
 use App\Models\product;
 use App\Models\User;
@@ -78,17 +79,20 @@ class AdminController extends Controller
 
     public function createproduct()
     {
-
-        return view('admin.createproduct');
+        $categories = category::get();
+        return view('admin.createproduct', compact('categories'));
     }
     public function uploadproduct(Request $request)
     {
+
         $data = new product;
         $image = $request->image;
         $imagename = time() . '.' . $image->getClientOriginalExtension();
         $request->image->move('product-image', $imagename);
         $data->image = $imagename;
         $data->name = $request->name;
+        $data->category = $request->category;
+        $data->content = $request->content;
         $data->save();
         return redirect()->back();
 
@@ -103,18 +107,26 @@ class AdminController extends Controller
     public function updateproduct($id)
     {
         $data = product::find($id);
-        return view('admin.updateproduct', compact('data'));
+        $categories = category::get();
+        return view('admin.updateproduct', compact('data', 'categories'));
     }
 
     public function updateview(Request $request, $id)
     {
         $data = product::find($id);
-        $image = $request->image;
-        $imagename = time() . '.' . $image->getClientOriginalExtension();
-        $request->image->move('product-image', $imagename);
-        $data->image = $imagename;
+
+        if (isset($request->image)) {
+            $image = $request->image;
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $request->image->move('product-image', $imagename);
+            $data->image = $imagename;
+        }
+        $data->category = $request->category;
+        $data->name = $request->name;
+        $data->content = $request->content;
         $data->save();
         return redirect()->back();
 
     }
+
 }

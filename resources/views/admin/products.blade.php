@@ -23,7 +23,7 @@
             <div class="form">
                 <div class="sheet product">
                     <div class="header">
-                        <p>Products</p>
+                        <h1>Products</h1>
                     </div>
                     <table>
                         <div class="btn"><a href="{{ url('/createproduct') }}">Create</a> </div>

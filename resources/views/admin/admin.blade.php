@@ -12,8 +12,6 @@
         <!-- partial -->
         @include('admin.navbar')
         <div class="container-fluid page-body-wrapper">
-
-            @include('admin.theme')
             <!-- partial -->
             @include('admin.sidebar')
             <!-- partial -->

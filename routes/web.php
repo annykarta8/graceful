@@ -41,7 +41,7 @@ Route::post('/upload', [AdminController::class, 'upload']);
 /*product */
 Route::get('/products', [AdminController::class, 'products']);
 
-Route::post('/uploadproduct', [AdminController::class, 'uploadproduct']);
+Route::post('/uploadproduct', [AdminController::class, 'uploadproduct']); //createproduct
 
 Route::get('/createproduct', [AdminController::class, 'createproduct']);
 
@@ -49,17 +49,11 @@ Route::get('/deleteproduct/{id}', [AdminController::class, 'deleteproduct']);
 
 Route::get('/updateproduct/{id}', [AdminController::class, 'updateproduct']);
 
-Route::post('/updateview/{id}', [AdminController::class, 'updateview']);
+Route::post('/updateview/{id}', [AdminController::class, 'updateview']); //updateproduct
 
-Route::get('/product/earrings', [HomeController::class, 'earrings']);
+Route::get('/product/productdetail/{product_id}', [HomeController::class, 'productdetail']); //productdetail
 
-Route::get('/product/bracelet', [HomeController::class, 'bracelet']);
-
-Route::get('/product/rings', [HomeController::class, 'rings']);
-
-Route::get('/product/necklace', [HomeController::class, 'necklace']);
-
-Route::get('/product/hairaccessory', [HomeController::class, 'hairaccessory']);
+Route::get('/product/category/{category_id}', [HomeController::class, 'showlist']);
 
 Route::get('/redirects', [HomeController::class, 'redirects']);
 

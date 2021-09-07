@@ -23,19 +23,31 @@
                 <form action="{{ url('/updateview',$data->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="return"><a href="{{ url('/products') }}">Return</a></div>
-                    <div>
-                        <label>Product Name:</label>
+                    <div class="product-name">
+                        <h1>Product Name:</h1>
                         <input type="text" name="name" value="{{ $data->name }}" required>
                     </div>
                     <div class="old">
-                        <label>Old Image:</label>
+                        <h1>Old Image:</h1>
                         <label><img src='/product-image/{{ $data->image }}'
                                 style="width: 10%; height:10%; display: inherit"></label>
 
                     </div>
                     <div class="new">
-                        <label>Update Image:</label>
-                        <input type="file" name="image" required>
+                        <h1>Update Image:</h1>
+                        <input type="file" name="image">
+                    </div>
+                    <div class="update">
+                        <h1>Category:</h1>
+                        <select name="category" id="category">
+                            @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->title }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="content">
+                        <h1>Content:</h1>
+                        <textarea name="content" id="content" cols="30" rows="10">{{ $data->content }}</textarea>
                     </div>
                     <div class="save"><input class="submit" type="submit" value="Save"></div>
                 </form>

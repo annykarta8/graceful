@@ -18,7 +18,7 @@
         </div> --}}
     </div>
 
-    <div class="hidden sm:flex sm:items-center sm:ml-6">
+    <div class=" sm:flex sm:items-center sm:ml-6">
         <!-- Teams Dropdown -->
         @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
         <div>
@@ -86,7 +86,11 @@
                     @else
                     <span class="inline-flex rounded-md">
                         <button type="button"
-                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition">
+                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition"
+                            style="font-size: 15px;
+                            border: solid 1px lightgray;
+                            padding: 10px;
+                            width: 75px;">
                             {{ Auth::user()->name }}
 
                             <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
@@ -123,7 +127,7 @@
                         @csrf
 
                         <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                                this.closest('form').submit();" style="margin-top: 10px">
                             {{ __('Log Out') }}
                         </x-jet-dropdown-link>
                     </form>
@@ -132,7 +136,7 @@
         </div>
     </div>
 
-    <!-- Hamburger -->
+    {{--  <!-- Hamburger -->
     <div class="-mr-2 flex items-center sm:hidden">
         <button @click="open = ! open"
             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
@@ -143,7 +147,7 @@
                     stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
-    </div>
+    </div>  --}}
     </div>
     </div>
 

@@ -1,4 +1,4 @@
-<!-- partial:partials/_settings-panel.html -->
+{{-- <!-- partial:partials/_settings-panel.html -->
 <div class="theme-setting-wrapper">
     <div id="settings-trigger"><i class="typcn typcn-cog-outline"></i></div>
     <div id="theme-settings" class="settings-panel">
@@ -11,4 +11,4 @@
             <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
         </div>
     </div>
-</div>
+</div> --}}

@@ -15,3 +15,5 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="jquery.multiscroll.css" />
+<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">

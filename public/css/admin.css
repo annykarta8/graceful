@@ -28,7 +28,6 @@
     text-align: center;
     width: 100%;
     height: 100%;
-    padding-top: 30px;
 }
 
 table {
@@ -36,7 +35,6 @@ table {
     width: 100%;
     display: initial;
     line-height: 100px;
-    margin-top: 20px;
 }
 
 label {
@@ -56,7 +54,7 @@ label {
     padding: 5px;
 } */
 
-.form p {
+.form h1 {
     text-align: center;
     font-family: serif;
     font-weight: 600;
@@ -65,7 +63,18 @@ label {
     margin-top: 30px;
     color: navy;
 }
-
+.old img {
+    width: 10%;
+    display: inline-block;
+    margin-top: 30px;
+}
+.update {
+    padding-left: 50px;
+}
+.update input {
+    padding-left: 100px;
+    margin-top: 20px;
+}
 /* .a {
     left: 50px;
     top: 100px;
@@ -181,7 +190,7 @@ tr td {
     margin-right: 100px;
 }
 .sheet .header {
-    height: 100px;
+    height: 80px;
 }
 
 .ring-1 {
@@ -202,6 +211,24 @@ td {
 .product td {
     padding: 40px;
 }
+.create-product p {
+    font-size: larger;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.product-image {
+    padding-left: 180px;
+}
+.product-name {
+    padding-left: 100px;
+}
+.new {
+    padding-left: 50px;
+}
+.new input {
+    padding-left: 50px;
+    margin-top: 20px;
+}
 /*paginate*/
 .hidden p {
     display: none;
@@ -210,16 +237,20 @@ td {
     align-items: center;
 }
 .hidden .rounded-l-md {
-    margin-top: 30px;
     height: 50px;
+    margin-top: 30px;
 }
 .hidden .-ml-px {
     width: 10px;
     height: 50px;
 }
+
 .hidden .rounded-r-md {
     width: 40px;
 }
 .product nav {
-    margin-left: 750px;
+    margin-left: 600px;
+}
+.hidden .z-0 {
+    box-shadow: none !important;
 }
