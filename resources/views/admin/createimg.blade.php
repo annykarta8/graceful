@@ -30,7 +30,7 @@
                         <img src="https://image.flaticon.com/icons/png/512/4206/4206322.png"
                             style="cursor: pointer; width: 10%; height:10%; display: inherit">
                     </label>
-                    <div class="save"><input class="submit" type="submit" value="Save"></div>
+                    <div class="save"><input class="submit" type="submit" value="Save" onclick="success()"></div>
                 </form>
             </div>
         </div>

@@ -7,7 +7,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <title>首頁</title>
+    <link rel="icon" type="image/x-icon" href="{{ url('/slideimage/icon.ico') }}" />
+    <title>Welcome Graceful</title>
 </head>
 
 <body onload="start()">

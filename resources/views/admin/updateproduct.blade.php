@@ -49,7 +49,7 @@
                         <h1>Content:</h1>
                         <textarea name="content" id="content" cols="30" rows="10">{{ $data->content }}</textarea>
                     </div>
-                    <div class="save"><input class="submit" type="submit" value="Save"></div>
+                    <div class="save"><input class="submit" type="submit" value="Save" onclick="success()"></div>
                 </form>
             </div>
         </div>

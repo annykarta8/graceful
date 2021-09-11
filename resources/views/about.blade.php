@@ -8,6 +8,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ url('/slideimage/icon.ico') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>About Graceful</title>
 </head>
@@ -17,12 +18,9 @@
     <div class="container">
         <div class="row">
             <div class="about">
-                <div class="col-4"><img src="{{ url('/slideimage/01.jpg') }}" alt=""></div>
-                <div class="col-4"> <img src="{{ url('/slideimage/02.jpg') }}" alt=""></div>
-                <div class="col-4"> <img src="{{ url('/slideimage/03.jpg') }}" alt=""></div>
-                <div class="caption">
-                    <p>Graceful</p>
-                </div>
+                <div class="col-md-4"><img src="{{ url('/slideimage/01.jpg') }}" alt=""></div>
+                <div class="col-md-4"> <img src="{{ url('/slideimage/02.jpg') }}" alt=""></div>
+                <div class="col-md-4"> <img src="{{ url('/slideimage/03.jpg') }}" alt=""></div>
             </div>
         </div>
         <div class="introduce">

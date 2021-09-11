@@ -33,7 +33,7 @@
                             <input type="file" name="image" required>
                         </div>
                     </div>
-                    <div class="save"><input class="submit" type="submit" value="Save"></div>
+                    <div class="save"><input class="submit" type="submit" value="Save" onclick="success()"></div>
                 </form>
             </div>
         </div>

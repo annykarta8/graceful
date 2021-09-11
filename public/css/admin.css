@@ -238,7 +238,7 @@ td {
 }
 .hidden .rounded-l-md {
     height: 50px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 .hidden .-ml-px {
     width: 10px;

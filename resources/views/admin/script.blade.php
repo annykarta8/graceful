@@ -3,6 +3,11 @@
 <script src="{{ asset('js/jquery.zoom.min.js') }}"></script>
 <script src="https://use.fontawesome.com/65957d903a.js"></script>
 
+
+
+
+
+
 <script>
     function del() {
         var msg = "您確定要刪除嗎?";
@@ -13,8 +18,7 @@
         }
     }
 
-</script>
-<script>
+
     function debounce(func, wait = 20, immediate = true) {
         var timeout;
         return function () {
@@ -51,9 +55,8 @@
 
     window.addEventListener('scroll', debounce(checkSlide));
 
-</script>
 
-<script>
+
     var flag = 0;
 
     function start() {
@@ -68,21 +71,21 @@
         setTimeout("start()", 800);
     }
 
-</script>
-
-<script>
     function show() {
         let elem = document.querySelector('.menu');
         elem.style.display = 'flex';
     }
 
-</script>
-<script>
     function success() {
         alert("此操作已成功!")
     }
 
+    $(document).ready(function () {
+        $('#zoom-pic').zoom();
+    })
+
 </script>
+
 {{--  <script>
     $('.pic').click(function () {
         let product = $(this).attr('id')
@@ -98,9 +101,3 @@
     })
 
 </script>  --}}
-<script>
-    $(document).ready(function () {
-        $('#zoom-pic').zoom();
-    })
-
-</script>
